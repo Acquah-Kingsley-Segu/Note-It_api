@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const NoteSchema = new mongoose.Schema({
     title: {type: String, required: true},
     content: {type: String, required: true},
-    youtube: String,
-    website: String,
+    youtube: [String],
+    website: [String],
     book: [{
         title: { type:String, required:true},
         author: String,
