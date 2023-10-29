@@ -50,9 +50,9 @@ export const create_topic = asyncHandler(async (req: Request, res: Response, nex
         })
     }
     else{
+        res.status(409)
         res.json({
-            data: topic,
-            message: `Topic with name ${topic.name}`
+            message: `Topic with name ${topic.name} already exist`
         });
     }
 });
