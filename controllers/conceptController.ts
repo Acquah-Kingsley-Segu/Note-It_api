@@ -49,7 +49,7 @@ export const create_concept = asyncHandler(async (req: Request, res: Response, n
         res.status(409);
         res.json({
             data: [],
-            message: `Concept with name ${req.body.name} alreadt exist`
+            message: `Concept with name ${req.body.name} already exist`
         })
     }
 })
